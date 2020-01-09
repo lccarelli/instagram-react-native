@@ -3,7 +3,7 @@ import {
   StyleSheet,
   View,
 } from 'react-native';
-import RutasNoAutenticadas from './components/NoAutenticados/RutasNoAutenticadas';
+import RutasAutenticadas from './components/Autenticados/RutasAutenticadas';
 
 export default class App extends React.Component {
   constructor() {
@@ -13,17 +13,20 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <RutasNoAutenticadas />
+        <RutasAutenticadas style={styles.tab} />
       </View>
     )
-}
+  }
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
   },
+  tab: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  }
 });
 
 
